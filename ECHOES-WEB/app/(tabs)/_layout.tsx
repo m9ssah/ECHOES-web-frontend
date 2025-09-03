@@ -42,6 +42,22 @@ export default function TabLayout() {
           tabBarLabelStyle: { fontFamily: 'InterRegular' }, 
         }}
       />
+      <Tabs.Screen
+        name="DiscoverPage"
+        options={{
+          title: 'Discover',
+          tabBarIcon: ({ color }) => <MaterialIcons name="search" size={28} color={color}/>,
+          tabBarLabelStyle: { fontFamily: 'InterRegular' }, 
+        }}
+      />
+      <Tabs.Screen
+        name="FriendsPage"
+        options={{
+          title: 'Friends',
+          tabBarIcon: ({ color }) => <MaterialIcons name="group" size={28} color={color}/>,
+          tabBarLabelStyle: { fontFamily: 'InterRegular' }, 
+        }}
+      />
     </Tabs>
   );
 }
