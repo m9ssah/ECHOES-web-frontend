@@ -18,7 +18,7 @@ import { useThemeColor } from '@/hooks/useThemeColor';
 import { Ionicons } from '@expo/vector-icons';
 import Svg, { Defs, RadialGradient, Stop, Circle } from 'react-native-svg';
 import { useRouter } from 'expo-router';
-import USER from './data/userData' ; 
+import { USER } from '../data/userData.js' ; 
 
 export default function ProfilePage() {
     return (
@@ -29,7 +29,9 @@ export default function ProfilePage() {
                     <TouchableOpacity style={styles.profilePicture}>
                         <Image source={require('@/assets/images/profilepic.png')}/>
                     </TouchableOpacity>
-                    <
+                    <ThemedText style={styles.profileText}>
+                        @{USER.username}
+                    </ThemedText>
                 </View> 
 
                 {/* Top Artists */}
@@ -66,5 +68,9 @@ const styles = StyleSheet.create({
         height: 150,
         borderRadius: 50, 
     },
-
+    profileText: {
+        fontFamily: 'InterMedium',
+        fontSize: 36,
+        color: 'white', 
+    }
 }); 
