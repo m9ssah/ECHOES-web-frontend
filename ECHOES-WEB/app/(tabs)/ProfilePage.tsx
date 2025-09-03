@@ -18,3 +18,52 @@ import { useThemeColor } from '@/hooks/useThemeColor';
 import { Ionicons } from '@expo/vector-icons';
 import Svg, { Defs, RadialGradient, Stop, Circle } from 'react-native-svg';
 import { useRouter } from 'expo-router';
+
+export default function ProfilePage() {
+    return (
+        <ScrollView contentContainerStyle={styles.container}>
+            <View style={styles.backgroundCard}>
+                {/* Profile Header */}
+                <View style={styles.profileHeader}> 
+                    <TouchableOpacity style={styles.profilePicture}>
+                        <Image source={require('@/assets/images/profilepic.png')}/>
+                    </TouchableOpacity>
+                    <
+                </View> 
+
+                {/* Top Artists */}
+
+                {/* Top Songs */}
+
+                {/* Top Albums */}
+
+                {/* Listening History */}
+
+            </View>
+
+        </ScrollView>
+    );
+}
+
+const styles = StyleSheet.create({
+    container: { 
+        flex: 1,
+    }, 
+    backgroundCard: {
+        backgroundColor: '#322F35',
+        borderRadius: 10, 
+        position: 'absolute', 
+        marginLeft: 20, 
+    },
+    profileHeader: {
+        flexDirection: 'row', 
+        justifyContent: 'space-evenly',
+        padding: 10, 
+    },
+    profilePicture: {
+        width: 150, 
+        height: 150,
+        borderRadius: 50, 
+    },
+
+}); 
